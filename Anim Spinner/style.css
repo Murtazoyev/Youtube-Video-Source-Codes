@@ -1,0 +1,166 @@
+.animation-example {
+    font-size: 8px;
+    /* Sizing for mobile first */
+    border: 2px dotted #aaa;
+    background: #fff;
+    width: 32em;
+    height: 32em;
+    position: absolute;
+    top: calc(50% - 16em);
+    left: calc(50% - 16em);
+  }
+  .animation-example .large-shapes {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: spin 10s linear infinite;
+  }
+  .animation-example .small-shapes {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: spin 10s linear infinite;
+  }
+  .animation-example .middle-circle {
+    background: #eee;
+    border: 1px solid #333;
+    border-radius: 50%;
+    box-shadow: 0 0 4em rgba(0, 0, 0, 0.8), 0 0 2em rgba(0, 0, 0, 0.8) inset;
+    position: absolute;
+    top: calc(50% - 2em);
+    left: calc(50% - 2em);
+    width: 4em;
+    height: 4em;
+    
+  }
+  
+  .circle,
+  .square {
+    position: absolute;
+    background-color: grey;
+    border-top: 0.1em solid rgba(255, 255, 255, 0.4);
+    height: 12.5em;
+    width: 12.5em;
+  }
+  .circle.small,
+  .square.small {
+    width: 4em;
+    height: 4em;
+  }
+  
+  .circle {
+    border-radius: 50%;
+    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.5);
+  }
+  .circle.large {
+    left: calc(50% - 6.25em);
+    top: calc(50% - 12.5em);
+    transform-origin: 50% 12.5em;
+  }
+  .circle.small {
+    left: calc(50% - 2em);
+    top: calc(50% - 15em);
+    transform-origin: 50% 15em;
+  }
+  .circle.one {
+    background: rgba(16, 63, 236, 0.75);
+    transform: rotateZ(225deg);
+  }
+  .circle.two {
+    background: rgba(37, 172, 162, 0.75);
+    transform: rotateZ(180deg);
+  }
+  .circle.three {
+    background: rgba(233, 124, 32, 0.75);
+    transform: rotateZ(135deg);
+  }
+  .circle.four {
+    background: rgba(235, 67, 35, 0.75);
+    transform: rotateZ(90deg);
+  }
+  .circle.five {
+    background: rgba(190, 28, 65, 0.75);
+    transform: rotateZ(45deg);
+  }
+  .circle.six {
+    background: rgba(208, 57, 159, 0.75);
+    transform: rotateZ(0deg);
+  }
+  .circle.seven {
+    background: rgba(150, 32, 198, 0.75);
+    transform: rotateZ(-45deg);
+  }
+  .circle.eight {
+    background: rgba(95, 33, 203, 0.75);
+    transform: rotateZ(-90deg);
+  }
+  
+  .square {
+    border-radius: 25%;
+  }
+  .square.large {
+    transform: none;
+    left: calc(50% - 7.5em);
+    top: calc(50% - 7.5em);
+    background: rgba(30, 7, 66, 0.65);
+    border: none;
+    height: 15em;
+    width: 15em;
+  }
+  .square.large.one {
+    transform: rotateZ(45deg);
+  }
+  .square.small {
+    left: calc(50% - 2em);
+    top: calc(50% - 15em);
+    border: none;
+    background: none;
+    transform-origin: 50% 15em;
+  }
+  .square.small:after {
+    content: "";
+    position: absolute;
+    transform: rotate(-45deg);
+    border-radius: 25%;
+    width: 4em;
+    height: 4em;
+    box-shadow: -0.5em 0.5em 2em rgba(0, 0, 0, 0.5);
+  }
+  .square.small.two {
+    transform: rotateZ(180deg);
+  }
+  .square.small.two:after {
+    background: rgba(37, 172, 162, 0.75);
+  }
+  .square.small.four {
+    transform: rotateZ(90deg);
+  }
+  .square.small.four:after {
+    background: rgba(235, 67, 35, 0.75);
+  }
+  .square.small.six {
+    transform: rotateZ(0deg);
+  }
+  .square.small.six:after {
+    background: rgba(208, 57, 159, 0.75);
+  }
+  .square.small.eight {
+    transform: rotateZ(-90deg);
+  }
+  .square.small.eight:after {
+    background: rgba(95, 33, 203, 0.75);
+  }
+
+@keyframes spin {
+    0%{
+        transform: rotateZ(0);
+    }
+    50%{
+        transform: rotateZ(180deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
